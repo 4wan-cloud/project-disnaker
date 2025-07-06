@@ -1,6 +1,5 @@
 <!DOCTYPE html>
   <html lang="en">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +14,20 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
     </script>
+    <!-- fontawesome icon tab -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <!-- CSS Kustom untuk Animasi Fade-In -->
+  <style>
+    .tab-content {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
@@ -25,15 +38,18 @@
       </div>
       
       <!-- Tab Navigation -->
-<div class="flex flex-col space-y-2 mb-6 w-full max-w-xs mx-auto">
-  <button class="tab-button px-4 py-2 bg-gray-300 text-gray-800 text-sm rounded-md hover:bg-gray-400 transition-colors duration-300" onclick="openTab('profil')">Profil</button>
-  <button class="tab-button px-4 py-2 bg-gray-300 text-gray-800 text-sm rounded-md hover:bg-gray-400 transition-colors duration-300" onclick="openTab('pelatihan')">Pelatihan</button>
-  <button class="tab-button px-4 py-2 bg-gray-300 text-gray-800 text-sm rounded-md hover:bg-gray-400 transition-colors duration-300" onclick="openTab('penempatan')">Penempatan</button>
+<div class="flex justify-center space-x-2 mb-6 overflow-x-auto">
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('tentang')"><i class="fas fa-user mr-2"></i>Tentang Disnaker Magetan</button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('profil')"><i class="fas fa-user mr-2"></i>Profil</button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('pelatihan')"><i class="fas fa-graduation-cap mr-2"></i>Pelatihan</button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('penempatan')"><i class="fas fa-briefcase mr-2"></i>Penempatan</button>
 </div>
       
       <!-- Tab Content -->
-      <div id="profil" class="tab-content">
+      <div id="tentang" class="tab-content">
         <p class="text-gray-600 text-sm mt-2">Dinas Tenaga Kerja (Disnaker) Kabupaten Magetan adalah lembaga pemerintah daerah yang bertanggung jawab atas urusan ketenagakerjaan. Tugasnya meliputi perumusan, pelaksanaan, evaluasi, dan pelaporan kebijakan di bidang tenaga kerja dan transmigrasi, serta pelaksanaan administrasi dinas. Disnaker Magetan juga memberikan berbagai pelayanan terkait ketenagakerjaan, seperti pembuatan kartu pencari kerja (AK I), penempatan tenaga kerja, dan penyelesaian perselisihan hubungan industrial.</p>
+      </div>
+      <div id="Media Sosial & Website Dinas" class="tab-content hidden">
         <a href="https://instagram.com/disnaker.magetan" class="block bg-pink-500 text-white text-center py-3 mb-3 rounded-md hover:bg-pink-600 text-sm"><i class="fab fa-instagram mr-2"></i>Instagram</a>
         <a href="https://tiktok.com/@disnaker.mgt" class="block bg-black text-white text-center py-3 mb-3 rounded-md hover:bg-gray-800 text-sm"><i class="fab fa-tiktok mr-2"></i>Tiktok</a>
         <a href="https://threads.net/@disnaker.magetan" class="block bg-gray-700 text-white text-center py-3 mb-3 rounded-md hover:bg-gray-600 text-sm"><i class="fab fa-threads mr-2"></i>Threads</a>
