@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disnaker Magetan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <div class="text-center mb-6">
+        <img src="/images/pp.png" alt="Disnaker Magetan Logo" class="w-20 h-20 rounded-full mx-auto mb-4">
+        <h1 class="text-2xl font-bold text-gray-800">DISNAKER MAGETAN</h1>
+        <!--p class="text-gray-600 text-sm">@disnakermagetan</p-->
+        <p class="text-gray-600 text-sm mt-2">Dinas Tenaga Kerja (Disnaker) Kabupaten Magetan adalah lembaga pemerintah daerah yang bertanggung jawab atas urusan ketenagakerjaan. Tugasnya meliputi perumusan, pelaksanaan, evaluasi, dan pelaporan kebijakan di bidang tenaga kerja dan transmigrasi, serta pelaksanaan administrasi dinas. Disnaker Magetan juga memberikan berbagai pelayanan terkait ketenagakerjaan, seperti pembuatan kartu pencari kerja (AK I), penempatan tenaga kerja, dan penyelesaian perselisihan hubungan industrial.</p>
+      </div>
+      
+      <!-- Tab Navigation -->
+      <div class="flex justify-center space-x-2 mb-6 overflow-x-auto">
+        <button class="tab-button px-3 py-2 bg-blue-500 text-white text-sm rounded-md" onclick="openTab('profil')">Profil</button>
+        <button class="tab-button px-3 py-2 bg-gray-300 text-gray-800 text-sm rounded-md" onclick="openTab('pelatihan')">Pelatihan</button>
+        <button class="tab-button px-3 py-2 bg-gray-300 text-gray-800 text-sm rounded-md" onclick="openTab('penempatan')">Penempatan</button>
+      </div>
+      
+      <!-- Tab Content -->
+      <div id="profil" class="tab-content">
+        <a href="https://instagram.com/disnaker.magetan" class="block bg-pink-500 text-white text-center py-3 mb-3 rounded-md hover:bg-pink-600 text-sm">Instagram</a>
+        <a href="https://tiktok.com/@disnaker.mgt" class="block bg-black text-white text-center py-3 mb-3 rounded-md hover:bg-gray-800 text-sm">TikTok</a>
+        <a href="https://threads.net/@disnaker.magetan" class="block bg-gray-700 text-white text-center py-3 mb-3 rounded-md hover:bg-gray-600 text-sm">Threads</a>
+        <a href="https://disnaker.magetan.go.id" class="block bg-blue-600 text-white text-center py-3 mb-3 rounded-md hover:bg-blue-700 text-sm">Website Resmi</a>
+      </div>
+      <div id="pelatihan" class="tab-content hidden">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBKuTjgNPFFBfwt8K2dqgkdF26ys48QVbQC6_U87EcaCp-dA/viewform" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm">Form Pendaftaran Pelatihan</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSOJj4FkMxkz3ZON-U6z9_qnU0_zZmZhfhHF1BizVhFRhl2Q/viewform" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm">Form untuk Konsultasi Pelatihan/Usulan Pelatihan</a>
+      </div>
+      <div id="penempatan" class="tab-content hidden">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQz_E9R0frdIHlWRc2_n5faKof-aZv8tbcYspzAQDAMZQH7A/viewform?pli=1" class="block bg-purple-500 text-white text-center py-3 mb-3 rounded-md hover:bg-purple-600 text-sm">Form Upload Data Bagi Pemberi Lowongan</a>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+  </html>
