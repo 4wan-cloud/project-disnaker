@@ -34,6 +34,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .tab-button.active .fa-chevron-down {
+      transform: rotate(180deg);
+      transition: transform 0.5s ease;
+    }
   </style>
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
@@ -49,12 +53,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       
       <!-- Tab Navigation -->
-<div class="flex flex-col space-y-2 mb-6 w-full max-w-xs mx-auto">
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('tentang')"><i class="fa-solid fa-id-card-clip" ml-6></i>Tentang Web Portal</button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('Media Sosial & Website Dinas')"><i class="fa-solid fa-hashtag" ml-6></i>Media Sosial & Website Dinas</button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('pelatihan')"><i class="fa-solid fa-graduation-cap" mr-6></i>Form Untuk Pelatihan Kerja</button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('penempatan')"><i class="fa-solid fa-briefcase" mr-6></i>Form Untuk Pemberi Lowongan Kerja</button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('ak1')"><i class="fa-solid fa-earth-asia" mr-6></i>Pendaftaran Online Kartu AK1</button>
+<div class="flex flex-col space-y-4 mb-6 w-full max-w-xs mx-auto">
+  <button class="tab-button active px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('tentang')"><span class="flex items-center"><i class="fa-solid fa-id-card-clip" ml-6></i>Tentang Web Portal</span><i class="fas fa-chevron-down"></i></button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('Media Sosial & Website Dinas')"><span class="flex items-center"><i class="fa-solid fa-hashtag" ml-6></i>Media Sosial & Website Dinas</span><i class="fas fa-chevron-down"></i></button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('pelatihan')"><span class="flex items-center"><i class="fa-solid fa-graduation-cap" mr-6></i>Form Untuk Pelatihan Kerja</span><i class="fas fa-chevron-down"></i></button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('penempatan')"><span class="flex items-center"><i class="fa-solid fa-briefcase" mr-6></i>Form Untuk Pemberi Lowongan Kerja</span><i class="fas fa-chevron-down"></i></button>
+  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('ak1')"><span class="flex items-center"><i class="fa-solid fa-earth-asia" mr-6></i>Pendaftaran Online Kartu AK1</span><i class="fas fa-chevron-down"></i></button>
 </div>
       
       <!-- Tab Content -->
