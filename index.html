@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WBHP4MMD');</script>
-<!-- End Google Tag Manager -->
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WBHP4MMD');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disnaker Magetan</title>
@@ -16,102 +19,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-74RZ3RSTGT"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-74RZ3RSTGT');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-74RZ3RSTGT');
     </script>
-    <!-- fontawesome icon tab -->
+    <!-- FontAwesome CDN -->
     <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <!-- CSS Kustom untuk Animasi Fade-In, Dropdown dan cevron-->
-  <style>
-    .tab-content {
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .dropdown-menu {
-      display: none;
-      animation: slideDown 0.3s ease-in-out;
-    }
-    .dropdown-menu.active {
-      display: block;
-    }
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .dropdown-button.active .fa-chevron-down {
-      transform: rotate(180deg);
-      transition: transform 0.3s ease;
-    }
-  </style>
-  </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <!-- CSS Kustom -->
+    <style>
+        .tab-content {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .dropdown-menu {
+            display: none;
+            animation: slideDown 0.3s ease-in-out;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .dropdown-button.active .fa-chevron-down {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBHP4MMD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBHP4MMD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-      <div class="text-center mb-6">
-        <img src="/images/pp.png" alt="Disnaker Magetan Logo" class="w-20 h-20 mx-auto mb-4">
-        <h1 class="text-2xl font-bold text-gray-800">DINAS TENAGA KERJA KABUPATEN MAGETAN BIDANG PELATIHAN DAN PENEMPATAN TENAGA KERJA</h1>
-        <!--p class="text-gray-600 text-sm">@disnakermagetan</p-->
-      </div>
-      
-      <!-- Dropdown Navigation -->
-<div class="relative mb-6 w-full max-w-xs mx-auto">
-  <button id="dropdownButton" class="dropdown-button w-full px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="toggleDropdown()">
-        <span id="dropdownText" class="flex items-center"><i class="fas fa-user mr-6"></i>Profil</span>
-        <i class="fas fa-chevron-down"></i>
-      </button>
-      <ul id="dropdownMenu" class="dropdown-menu absolute w-full mt-2 bg-white shadow-lg rounded-md z-10">
-        <li>
-          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('tentang')"><i class="fa-solid fa-id-card-clip mr-6"></i>Tentang Web Portal</button>
-        </li>
-        <li>
-          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('Media Sosial & Website Dinas')"><i class="fa-solid fa-hashtag mr-6"></i>Media Sosial & Website Dinas</button>
-        </li>
-        <li>
-          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('pelatihan')"><i class="fa-solid fa-graduation-cap mr-6"></i>Form Untuk Pelatihan Kerja</button>
-        </li>
-        <li>
-          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('penempatan')"><i class="fa-solid fa-briefcase mr-6"></i>Form Untuk Pemberi Lowongan Kerja</button>
-        </li>
-        <li>
-          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('ak1')"><i class="fa-solid fa-earth-asia mr-6"></i>Pendaftaran Online Kartu AK1</button>
-        </li>
-      </ul>
-    </div>
-      
-      <!-- Tab Content -->
-      <div id="tentang" class="tab-content">
-        <p class="text-gray-600 text-sm mt-2">Web Portal bidang pelatihan dan penempatan tenaga kerja Dinas Tenaga Kerja Magetan ini dibuat untuk memudahkan masyarakat untuk mendaftar pelatihan serta memberikan informasi lowongan yang ingin dipublikasikan oleh Dinas Tenaga Kerja Magetan.
-        Untuk informasi mengenai Dinas Tenaga Kerja Kabupaten Magetan silahkan mengunjungi media sosial kami ya!</p>
-      </div>
-      <div id="Media Sosial & Website Dinas" class="tab-content hidden">
-        <a href="https://instagram.com/disnaker.magetan" class="block bg-pink-600 text-white text-center py-3 mb-3 rounded-md hover:bg-pink-600 text-sm"><i class="fa-brands fa-instagram" mk-2></i> Instagram</a>
-        <a href="https://tiktok.com/@disnaker.mgt" class="block bg-black text-white text-center py-3 mb-3 rounded-md hover:bg-gray-800 text-sm"><i class="fa-brands fa-tiktok" mk-2></i> Tiktok</a>
-        <a href="https://threads.net/@disnaker.magetan" class="block bg-gray-700 text-white text-center py-3 mb-3 rounded-md hover:bg-gray-600 text-sm"><i class="fa-brands fa-threads" mk-2></i> Threads</a>
-        <a href="https://disnaker.magetan.go.id" class="block bg-blue-600 text-white text-center py-3 mb-3 rounded-md hover:bg-blue-700 text-sm"><i class="fa-solid fa-sitemap" mk-2></i> Website Resmi Disnaker</a>
-      </div>
-      <div id="pelatihan" class="tab-content hidden">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBKuTjgNPFFBfwt8K2dqgkdF26ys48QVbQC6_U87EcaCp-dA/viewform" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm"><i class="fa-solid fa-user-check" mk-2></i> Form Pendaftaran Pelatihan</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSOJj4FkMxkz3ZON-U6z9_qnU0_zZmZhfhHF1BizVhFRhl2Q/viewform" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm"><i class="fa-solid fa-user-tie" mk-2></i> Form untuk Konsultasi Pelatihan/Usulan Pelatihan</a>
-      </div>
-      <div id="penempatan" class="tab-content hidden">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQz_E9R0frdIHlWRc2_n5faKof-aZv8tbcYspzAQDAMZQH7A/viewform?pli=1" class="block bg-purple-500 text-white text-center py-3 mb-3 rounded-md hover:bg-purple-600 text-sm"><i class="fa-solid fa-handshake" mk-2></i> Form Upload Data Bagi Pemberi Lowongan</a>
-        <a href="https://wa.me/6289524176626" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm"><i class="fa-brands fa-whatsapp" mk-2></i> Setelah submit data silahkan hubungi kami</a>
-      </div>
-      <div id="ak1" class="tab-content hidden">
-        <a href="https://siapkerja.kemnaker.go.id/app/home" class="block bg-purple-500 text-white text-center py-3 mb-3 rounded-md hover:bg-purple-600 text-sm"><i class="fa-solid fa-address-card" mk-2></i> Link Pendaftaran Kartu AK1 (Kartu Kuning) online</a>
-        <p class="text-gray-600 text-sm mt-2">Setelah melakukan pendaftaran secara online bisa berkunjung ke kantor Disnaker Kabupaten Magetan untuk mencetak kartu kuning. Atau bisa berkunjung ke kantor Disnaker Magetan untuk pendaftaran manual dengan syarat membawa : Fotocopy KTP, Fotocopy Ijasah, Fotokopy Akte Lahir dan Pas foto 3x4 dengan background merah</p>
-      </div>
+        <div class="text-center mb-6">
+            <img src="/images/pp.png" alt="Disnaker Magetan Logo" class="w-20 h-20 mx-auto mb-4">
+            <h1 class="text-2xl font-bold text-gray-800">DINAS TENAGA KERJA KABUPATEN MAGETAN BIDANG PELATIHAN DAN PENEMPATAN TENAGA KERJA</h1>
+        </div>
+
+        <!-- Dropdown Navigation -->
+        <div class="relative mb-6 w-full max-w-xs mx-auto">
+            <button id="dropdownButton" class="dropdown-button w-full px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="toggleDropdown()">
+                <span id="dropdownText" class="flex items-center"><i class="fas fa-user mr-6"></i>Profil</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="dropdownMenu" class="dropdown-menu absolute w-full mt-2 bg-white shadow-lg rounded-md z-10">
+                <li>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('tentang')"><i class="fa-solid fa-id-card-clip mr-6"></i>Tentang Web Portal</button>
+                </li>
+                <li>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('Media Sosial & Website Dinas')"><i class="fa-solid fa-hashtag mr-6"></i>Media Sosial & Website Dinas</button>
+                </li>
+                <li>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('pelatihan')"><i class="fa-solid fa-graduation-cap mr-6"></i>Form Untuk Pelatihan Kerja</button>
+                </li>
+                <li>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('penempatan')"><i class="fa-solid fa-briefcase mr-6"></i>Form Untuk Pemberi Lowongan Kerja</button>
+                </li>
+                <li>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('ak1')"><i class="fa-solid fa-earth-asia mr-6"></i>Pendaftaran Online Kartu AK1</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tentang" class="tab-content">
+            <p class="text-gray-600 text-sm mt-2">Web Portal bidang pelatihan dan penempatan tenaga kerja Dinas Tenaga Kerja Magetan ini dibuat untuk memudahkan masyarakat untuk mendaftar pelatihan serta memberikan informasi lowongan yang ingin dipublikasikan oleh Dinas Tenaga Kerja Magetan. Untuk informasi mengenai Dinas Tenaga Kerja Kabupaten Magetan silahkan mengunjungi media sosial kami ya!</p>
+        </div>
+        <div id="Media Sosial & Website Dinas" class="tab-content hidden">
+            <a href="https://instagram.com/disnaker.magetan" class="block bg-pink-600 text-white text-center py-3 mb-3 rounded-md hover:bg-pink-700 text-sm"><i class="fa-brands fa-instagram mr-2"></i> Instagram</a>
+            <a href="https://tiktok.com/@disnaker.mgt" class="block bg-black text-white text-center py-3 mb-3 rounded-md hover:bg-gray-800 text-sm"><i class="fa-brands fa-tiktok mr-2"></i> Tiktok</a>
+            <a href="https://threads.net/@disnaker.magetan" class="block bg-gray-700 text-white text-center py-3 mb-3 rounded-md hover:bg-gray-600 text-sm"><i class="fa-brands fa-threads mr-2"></i> Threads</a>
+            <a href="https://disnaker.magetan.go.id" class="block bg-blue-600 text-white text-center py-3 mb-3 rounded-md hover:bg-blue-700 text-sm"><i class="fa-solid fa-sitemap mr-2"></i> Website Resmi Disnaker</a>
+        </div>
+        <div id="pelatihan" class="tab-content hidden">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBKuTjgNPFFBfwt8K2dqgkdF26ys48QVbQC6_U87EcaCp-dA/viewform" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm"><i class="fa-solid fa-user-check mr-2"></i> Form Pendaftaran Pelatihan</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSOJj4FkMxkz3ZON-U6z9_qnU0_zZmZhfhHF1BizVhFRhl2Q/viewform" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm"><i class="fa-solid fa-user-tie mr-2"></i> Form untuk Konsultasi Pelatihan/Usulan Pelatihan</a>
+        </div>
+        <div id="penempatan" class="tab-content hidden">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQz_E9R0frdIHlWRc2_n5faKof-aZv8tbcYspzAQDAMZQH7A/viewform?pli=1" class="block bg-purple-500 text-white text-center py-3 mb-3 rounded-md hover:bg-purple-600 text-sm"><i class="fa-solid fa-handshake mr-2"></i> Form Upload Data Bagi Pemberi Lowongan</a>
+            <a href="https://wa.me/6289524176626" class="block bg-green-500 text-white text-center py-3 mb-3 rounded-md hover:bg-green-600 text-sm"><i class="fa-brands fa-whatsapp mr-2"></i> Setelah submit data silahkan hubungi kami</a>
+        </div>
+        <div id="ak1" class="tab-content hidden">
+            <a href="https://siapkerja.kemnaker.go.id/app/home" class="block bg-purple-500 text-white text-center py-3 mb-3 rounded-md hover:bg-purple-600 text-sm"><i class="fa-solid fa-address-card mr-2"></i> Link Pendaftaran Kartu AK1 (Kartu Kuning) online</a>
+            <p class="text-gray-600 text-sm mt-2">Setelah melakukan pendaftaran secara online bisa berkunjung ke kantor Disnaker Kabupaten Magetan untuk mencetak kartu kuning. Atau bisa berkunjung ke kantor Disnaker Magetan untuk pendaftaran manual dengan syarat membawa: Fotocopy KTP, Fotocopy Ijasah, Fotokopy Akte Lahir dan Pas foto 3x4 dengan background merah</p>
+        </div>
     </div>
     <script src="/script.js"></script>
-  </body>
-  </html>
+</body>
+</html>
