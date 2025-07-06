@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <!-- CSS Kustom untuk Animasi Fade-In dan cevron-->
+    <!-- CSS Kustom untuk Animasi Fade-In, Dropdown dan cevron-->
   <style>
     .tab-content {
       animation: fadeIn 0.5s ease-in-out;
@@ -34,7 +34,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .tab-button.active .fa-chevron-down {
+    .dropdown-menu {
+      display: none;
+      animation: slideDown 0.3s ease-in-out;
+    }
+    .dropdown-menu.active {
+      display: block;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .dropdown-button.active .fa-chevron-down {
       transform: rotate(180deg);
       transition: transform 0.3s ease;
     }
@@ -52,14 +63,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!--p class="text-gray-600 text-sm">@disnakermagetan</p-->
       </div>
       
-      <!-- Tab Navigation (penampilan Dropdown) -->
-<div class="flex flex-col space-y-4 mb-6 w-full max-w-xs mx-auto">
-  <button class="tab-button active px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('tentang')"><span class="flex items-center"><i class="fa-solid fa-id-card-clip" ml-6></i>Tentang Web Portal</span><i class="fas fa-chevron-down"></i></button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('Media Sosial & Website Dinas')"><span class="flex items-center"><i class="fa-solid fa-hashtag" ml-6></i>Media Sosial & Website Dinas</span><i class="fas fa-chevron-down"></i></button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('pelatihan')"><span class="flex items-center"><i class="fa-solid fa-graduation-cap" mr-6></i>Form Untuk Pelatihan Kerja</span><i class="fas fa-chevron-down"></i></button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('penempatan')"><span class="flex items-center"><i class="fa-solid fa-briefcase" mr-6></i>Form Untuk Pemberi Lowongan Kerja</span><i class="fas fa-chevron-down"></i></button>
-  <button class="tab-button px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="openTab('ak1')"><span class="flex items-center"><i class="fa-solid fa-earth-asia" mr-6></i>Pendaftaran Online Kartu AK1</span><i class="fas fa-chevron-down"></i></button>
-</div>
+      <!-- Dropdown Navigation -->
+<div class="relative mb-6 w-full max-w-xs mx-auto">
+  <button id="dropdownButton" class="dropdown-button w-full px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="toggleDropdown()">
+        <span id="dropdownText" class="flex items-center"><i class="fas fa-user mr-6"></i>Profil</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <ul id="dropdownMenu" class="dropdown-menu absolute w-full mt-2 bg-white shadow-lg rounded-md z-10">
+        <li>
+          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('tentang')"><i class="fa-solid fa-id-card-clip mr-6"></i>Tentang Web Portal</button>
+        </li>
+        <li>
+          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('Media Sosial & Website Dinas')"><i class="fa-solid fa-hashtag mr-6"></i>Media Sosial & Website Dinas</button>
+        </li>
+        <li>
+          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('pelatihan')"><i class="fa-solid fa-graduation-cap mr-6"></i>Form Untuk Pelatihan Kerja</button>
+        </li>
+        <li>
+          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('penempatan')"><i class="fa-solid fa-briefcase mr-6"></i>Form Untuk Pemberi Lowongan Kerja</button>
+        </li>
+        <li>
+          <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab('ak1')"><i class="fa-solid fa-earth-asia mr-6"></i>Pendaftaran Online Kartu AK1</button>
+        </li>
+      </ul>
+    </div>
       
       <!-- Tab Content -->
       <div id="tentang" class="tab-content">
@@ -67,7 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Untuk informasi mengenai Dinas Tenaga Kerja Kabupaten Magetan silahkan mengunjungi media sosial kami ya!</p>
       </div>
       <div id="Media Sosial & Website Dinas" class="tab-content hidden">
-        <a href="https://instagram.com/disnaker.magetan" class="block bg-pink-500 text-white text-center py-3 mb-3 rounded-md hover:bg-pink-600 text-sm"><i class="fa-brands fa-instagram" mk-2></i> Instagram</a>
+        <a href="https://instagram.com/disnaker.magetan" class="block bg-pink-600 text-white text-center py-3 mb-3 rounded-md hover:bg-pink-600 text-sm"><i class="fa-brands fa-instagram" mk-2></i> Instagram</a>
         <a href="https://tiktok.com/@disnaker.mgt" class="block bg-black text-white text-center py-3 mb-3 rounded-md hover:bg-gray-800 text-sm"><i class="fa-brands fa-tiktok" mk-2></i> Tiktok</a>
         <a href="https://threads.net/@disnaker.magetan" class="block bg-gray-700 text-white text-center py-3 mb-3 rounded-md hover:bg-gray-600 text-sm"><i class="fa-brands fa-threads" mk-2></i> Threads</a>
         <a href="https://disnaker.magetan.go.id" class="block bg-blue-600 text-white text-center py-3 mb-3 rounded-md hover:bg-blue-700 text-sm"><i class="fa-solid fa-sitemap" mk-2></i> Website Resmi Disnaker</a>
