@@ -3,12 +3,12 @@ function openTab(tabName) {
       tab.classList.add('hidden');
     });
     document.querySelectorAll('.tab-button').forEach(button => {
-      button.classList.remove('text-blue-500', 'border-blue-500');
-      button.classList.add('text-gray-600', 'border-transparent');
+      button.classList.remove('text-blue-600', 'text-white');
+      button.classList.add('text-gray-300', 'text-gray-800');
     });
     document.getElementById(tabName).classList.remove('hidden');
-    event.currentTarget.classList.remove('text-gray-600', 'border-transparent');
-    event.currentTarget.classList.add('text-blue-500', 'border-blue-500');
+    event.currentTarget.classList.remove('text-gray-300', 'text-gray-800');
+    event.currentTarget.classList.add('text-blue-600', 'text-white');
     // Kirim event ke Google Analytics
     gtag('event', 'tab_click', {
       'event_category': 'Tab Navigation',
