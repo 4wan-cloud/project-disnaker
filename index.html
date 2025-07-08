@@ -172,16 +172,16 @@
                     <li>Pas Foto ukuran 3x4 (latar belakang merah)</li>
                     <li>Dokumen pendukung lainnya (sertifikat pelatihan/pengalaman kerja)</li>
                 </ul>
-                <p class="text-gray-600 text-sm mt-2">Setelah mendaftar online, silakan kunjungi Kantor Dinas Tenaga Kerja Kabupaten Magetan untuk mencetak kartu.</p>
+                <p class="text-gray-600 text-sm mt-2">Setelah mendaftar online, silakan kunjungi Kantor Dinas Tenaga Kerja Kabupaten Magetan dengan membawa dokumen diatas untuk mencetak kartu.</p>
             </div>
         </div>
         
         <div id="data-pelatihan" class="tab-content hidden" role="tabpanel">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Data Monitoring Pelatihan</h3>
-            <p class="text-gray-600 text-sm mb-4">Visualisasi data pelatihan dalam bentuk chart interaktif.</p>
+            <p class="text-gray-600 text-sm mb-4">Visualisasi data pelatihan dalam bentuk chart interaktif dalam kurun 1 semester.</p>
             
             <div class="mb-6">
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Jumlah Peserta Pelatihan per Program</h4>
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Jumlah Pendaftar Pelatihan per Program</h4>
                 <div class="chart-container">
                     <canvas id="trainingChart"></canvas>
                 </div>
@@ -294,11 +294,11 @@
             // Fungsi untuk render chart
             function renderCharts() {
                 // Data contoh - bisa diganti dengan data real dari API
-                const trainingPrograms = ['Teknik Komputer', 'Akuntansi', 'Bahasa Inggris', 'Otomotif', 'Kecantikan'];
-                const participants = [45, 32, 28, 38, 25];
-                const completionRates = [85, 78, 92, 80, 88];
+                const trainingPrograms = ['Pelatihan Bahasa Jepang', 'Desain Grafis', 'Pelatihan Tata Boga', 'Operator Garmen', 'Teknik Pengelasan'];
+                const participants = [208, 69, 130, 160, 278];
+                const completionRates = [96, 94, 100, 98, 99];
                 const ageGroups = ['<20', '20-25', '26-30', '31-35', '>35'];
-                const ageDistribution = [15, 35, 25, 15, 10];
+                const ageDistribution = [251, 433, 167, 94, 125];
                 
                 // Chart 1: Jumlah Peserta Pelatihan per Program
                 const trainingCtx = document.getElementById('trainingChart').getContext('2d');
