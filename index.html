@@ -186,18 +186,16 @@
                     <canvas id="trainingChart"></canvas>
                 </div>
             </div>
-            
-            <div class="mb-6">
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Tingkat Penyelesaian Pelatihan</h4>
-                <div class="chart-container">
-                    <canvas id="completionChart"></canvas>
-                </div>
-            </div>
-            
             <div>
                 <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Peserta</h4>
                 <div class="chart-container">
                     <canvas id="ageDistributionChart"></canvas>
+                </div>
+            </div>
+            <div class="mb-6">
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Tingkat Penyelesaian Pelatihan</h4>
+                <div class="chart-container">
+                    <canvas id="completionChart"></canvas>
                 </div>
             </div>
             
@@ -293,7 +291,7 @@
 
             // Fungsi untuk render chart
             function renderCharts() {
-                // Data contoh - bisa diganti dengan data real dari API
+                // Data real pengambilan dari sheet pendaftaran pelatihan
                 const trainingPrograms = ['Pelatihan Bahasa Jepang', 'Desain Grafis', 'Pelatihan Tata Boga', 'Operator Garmen', 'Teknik Pengelasan'];
                 const participants = [208, 69, 130, 160, 278];
                 const completionRates = [96, 94, 100, 98, 99];
