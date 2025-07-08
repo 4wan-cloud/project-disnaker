@@ -186,19 +186,18 @@
                     <canvas id="trainingChart"></canvas>
                 </div>
             </div>
-            <div>
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Peserta</h4>
-                <div class="chart-container">
-                    <canvas id="ageDistributionChart"></canvas>
-                </div>
-            </div>
             <div class="mb-6">
                 <h4 class="font-semibold text-gray-800 text-sm mb-2">Tingkat Penyelesaian Pelatihan</h4>
                 <div class="chart-container">
                     <canvas id="completionChart"></canvas>
                 </div>
             </div>
-            
+            <div>
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Peserta</h4>
+                <div class="chart-container">
+                    <canvas id="ageDistributionChart"></canvas>
+                </div>
+            </div>
             <p class="text-gray-600 text-sm mt-4">Untuk informasi lebih lanjut, hubungi kami melalui Media Sosial kami.</p>
         </div>
 
@@ -345,15 +344,15 @@
                     }
                 });
                 
-                // Chart 2: Distribusi Usia Peserta
-                const completionCtx = document.getElementById('ageDistributionChart').getContext('2d');
-                new Chart(ageCtx, {
+                // Chart 2: Tingkat Penyelesaian Pelatihan
+                const completionCtx = document.getElementById('completionChart').getContext('2d');
+                new Chart(completionCtx, {
                     type: 'doughnut',
                     data: {
-                        labels: ageGroups,
+                        labels: trainingPrograms,
                         datasets: [{
-                            label: 'Distribusi Usia Peserta (%)',
-                            data: ageDistribution,
+                            label: 'Tingkat Penyelesaian (%)',
+                            data: completionRates,
                             backgroundColor: [
                                 'rgba(59, 130, 246, 0.7)',
                                 'rgba(16, 185, 129, 0.7)',
@@ -389,15 +388,15 @@
                     }
                 });
                 
-                // Chart 3: Tingkat Penyelesaian Pelatihan
-                const ageCtx = document.getElementById('completionChart').getContext('2d');
-                new Chart(completionCtx, {
+                // Chart 3: Distribusi Usia Peserta
+                const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
+                new Chart(ageCtx, {
                     type: 'line',
                     data: {
-                        labels: trainingPrograms,
+                        labels: ageGroups,
                         datasets: [{
-                            label: 'Tingkat Penyelesaian (%)',
-                            data: completionRates,
+                            label: 'Distribusi Usia Peserta (%)',
+                            data: ageDistribution,
                             backgroundColor: 'rgba(59, 130, 246, 0.2)',
                             borderColor: 'rgba(59, 130, 246, 1)',
                             borderWidth: 2,
@@ -413,20 +412,19 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: 'Persentase Peserta (%)'
+                                    text: 'Persentase Peserta Pendaftar (%)'
                                 }
                             },
                             x: {
                                 title: {
                                     display: true,
-                                    text: 'Jenis Pelatihan'
+                                    text: 'Kelompok Usia'
                                 }
                             }
                         }
                     }
                 });
             }
-
             // Track link Klik untuk Google Analytics
             document.querySelectorAll('.tab-content a').forEach(link => {
                 link.addEventListener('click', function() {
