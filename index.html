@@ -347,15 +347,15 @@
                     }
                 });
                 
-                // Chart 2: Tingkat Penyelesaian Pelatihan
-                const completionCtx = document.getElementById('completionChart').getContext('2d');
-                new Chart(completionCtx, {
+                // Chart 2: Distribusi Usia Peserta
+                const completionCtx = document.getElementById('ageDistributionChart').getContext('2d');
+                new Chart(ageCtx, {
                     type: 'doughnut',
                     data: {
-                        labels: trainingPrograms,
+                        labels: ageGroups,
                         datasets: [{
-                            label: 'Tingkat Penyelesaian (%)',
-                            data: completionRates,
+                            label: 'Distribusi Usia Peserta (%)',
+                            data: ageDistribution,
                             backgroundColor: [
                                 'rgba(59, 130, 246, 0.7)',
                                 'rgba(16, 185, 129, 0.7)',
@@ -391,15 +391,15 @@
                     }
                 });
                 
-                // Chart 3: Distribusi Usia Peserta
-                const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
-                new Chart(ageCtx, {
+                // Chart 3: Tingkat Penyelesaian Pelatihan
+                const ageCtx = document.getElementById('completionChart').getContext('2d');
+                new Chart(completionCtx, {
                     type: 'line',
                     data: {
-                        labels: ageGroups,
+                        labels: trainingPrograms,
                         datasets: [{
-                            label: 'Distribusi Usia Peserta (%)',
-                            data: ageDistribution,
+                            label: 'Tingkat Penyelesaian (%)',
+                            data: completionRates,
                             backgroundColor: 'rgba(59, 130, 246, 0.2)',
                             borderColor: 'rgba(59, 130, 246, 1)',
                             borderWidth: 2,
@@ -415,13 +415,13 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: 'Persentase Peserta Pendaftar (%)'
+                                    text: 'Persentase Peserta (%)'
                                 }
                             },
                             x: {
                                 title: {
                                     display: true,
-                                    text: 'Kelompok Usia'
+                                    text: 'Jenis Pelatihan'
                                 }
                             }
                         }
