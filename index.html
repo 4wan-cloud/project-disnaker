@@ -300,14 +300,14 @@
                 const ageGroups = ['<20', '20-25', '26-30', '31-35', '>35'];
                 const ageDistribution = [251, 433, 167, 94, 125];
                 
-                // Chart 1: Jumlah Peserta Pelatihan per Program
+                // Chart 1: Jumlah Peserta Pendaftar Pelatihan per Program
                 const trainingCtx = document.getElementById('trainingChart').getContext('2d');
                 new Chart(trainingCtx, {
                     type: 'bar',
                     data: {
                         labels: trainingPrograms,
                         datasets: [{
-                            label: 'Jumlah Peserta',
+                            label: 'Jumlah Peserta Pendaftar',
                             data: participants,
                             backgroundColor: [
                                 'rgba(59, 130, 246, 0.7)',
@@ -334,7 +334,7 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: 'Jumlah Peserta'
+                                    text: 'Jumlah Peserta Pendaftar'
                                 }
                             },
                             x: {
@@ -415,7 +415,7 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: 'Persentase Peserta (%)'
+                                    text: 'Persentase Peserta Pendaftar (%)'
                                 }
                             },
                             x: {
