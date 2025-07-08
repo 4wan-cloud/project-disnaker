@@ -120,22 +120,22 @@
         <!-- Isian Tab -->
         <div id="tentang" class="tab-content" role="tabpanel">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Tentang Portal Disnaker Magetan</h3>
-            <p class="text-gray-600 text-sm mb-2">Web Portal bidang pelatihan dan penempatan tenaga kerja Dinas Tenaga Kerja Magetan ini dibuat untuk memudahkan masyarakat dalam memberikan informasi lowongan kerja dan mendaftar pelatihan.</p>
+            <p class="text-gray-600 text-sm mb-2">Web Portal Bidang Pelatihan dan Penempatan Tenaga Kerja Dinas Tenaga Kerja Kabupaten Magetan ini dibuat untuk memudahkan masyarakat dalam memberikan informasi lowongan kerja dan mendaftar pelatihan.</p>
             <p class="text-gray-600 text-sm mb-2">Silakan pilih kategori dari menu dropdown di atas untuk informasi pelatihan dan penempatan tenaga kerja.</p>
-            <p class="text-gray-600 text-sm mb-2">Kami menyediakan informasi lowongan kerja yang dipublikasikan oleh Dinas Tenaga Kerja Kabupaten Magetan melalui media sosial kami untuk mendukung penempatan tenaga kerja.</p>
+            <p class="text-gray-600 text-sm mb-2">Kami menyediakan informasi lowongan kerja yang dipublikasikan melalui media sosial Dinas Tenaga Kerja Kabupaten Magetan untuk mendukung penempatan tenaga kerja.</p>
             <p class="text-gray-600 text-sm">Untuk informasi lebih lanjut mengenai Dinas Tenaga Kerja Kabupaten Magetan:<br>Kunjungi media sosial kami atau hubungi kami melalui WhatsApp.</p>
         </div>
         
         <div id="media-sosial" class="tab-content hidden" role="tabpanel">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Media Sosial & Website Resmi</h3>
-            <p class="text-gray-600 text-sm mb-4">Ikuti kami di media sosial untuk mendapatkan update terbaru dari Dinas Tenaga Kerja Magetan.</p>
+            <p class="text-gray-600 text-sm mb-4">Ikuti kami di media sosial untuk mendapatkan update terbaru dari Dinas Tenaga Kerja Kabupaten Magetan.</p>
             <div class="grid grid-cols-1 gap-3">
                 <a href="https://instagram.com/disnaker.magetan" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-pink-500 to-pink-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-instagram mr-2"></i> Instagram</a>
                 <a href="https://tiktok.com/@disnaker.mgt" target="_blank" rel="noopener noreferrer" class="block bg-gray-900 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-tiktok mr-2"></i> TikTok</a>
                 <a href="https://threads.net/@disnaker.magetan" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-threads mr-2"></i> Threads</a>
                 <a href="https://disnaker.magetan.go.id" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-sitemap mr-2"></i> Website Resmi Disnaker</a>
             </div>
-            <p class="text-gray-600 text-sm mt-4">Kunjungi website resmi kami untuk informasi lebih lanjut tentang layanan dan program kami.</p>
+            <p class="text-gray-600 text-sm mt-4">Kunjungi website resmi diatas untuk informasi lebih lanjut tentang layanan dan program kami.</p>
         </div>
         
         <div id="pelatihan" class="tab-content hidden" role="tabpanel">
@@ -164,7 +164,7 @@
                 <a href="https://siapkerja.kemnaker.go.id/app/home" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-address-card mr-2"></i> Pendaftaran Kartu AK1 Online</a>
             </div>
             <div class="mt-4 p-4 bg-gray-50 rounded-md">
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Persyaratan Cetak Kartu AK1:</h4>
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Persyaratan Pendaftaran dan Cetak Kartu AK1:</h4>
                 <ul class="text-gray-600 text-sm list-disc pl-5 space-y-1">
                     <li>Fotokopi KTP (Kartu Tanda Penduduk) yang masih berlaku</li>
                     <li>Fotokopi Kartu Keluarga (KK)</li>
@@ -193,7 +193,7 @@
                 </div>
             </div>
             <div>
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Peserta</h4>
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Pendaftar Pelatihan</h4>
                 <div class="chart-container">
                     <canvas id="ageDistributionChart"></canvas>
                 </div>
@@ -304,7 +304,7 @@
                     data: {
                         labels: trainingPrograms,
                         datasets: [{
-                            label: 'Jumlah Peserta Pendaftar',
+                            label: 'Jumlah Peserta Pendaftar Pelatihan',
                             data: participants,
                             backgroundColor: [
                                 'rgba(59, 130, 246, 0.7)',
@@ -331,7 +331,7 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: 'Jumlah Peserta Pendaftar'
+                                    text: 'Jumlah Peserta Pendaftar Pelatihan'
                                 }
                             },
                             x: {
@@ -388,14 +388,14 @@
                     }
                 });
                 
-                // Chart 3: Distribusi Usia Peserta
+                // Chart 3: Distribusi Usia Peserta Pendaftar Pelatihan
                 const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
                 new Chart(ageCtx, {
                     type: 'line',
                     data: {
                         labels: ageGroups,
                         datasets: [{
-                            label: 'Distribusi Usia Peserta (%)',
+                            label: 'Distribusi Usia Peserta Pendaftar Pelatihan (%)',
                             data: ageDistribution,
                             backgroundColor: 'rgba(59, 130, 246, 0.2)',
                             borderColor: 'rgba(59, 130, 246, 1)',
@@ -412,7 +412,7 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: 'Persentase Peserta Pendaftar (%)'
+                                    text: 'Persentase Peserta Pendaftar Pelatihan (%)'
                                 }
                             },
                             x: {
