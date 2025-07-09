@@ -338,10 +338,10 @@
                     }
                 });
                 
-                // Chart 2: Distribusi Usia Peserta Pendaftar Pelatihan (now as doughnut chart)
+                // Chart 2: Distribusi Usia Peserta Pendaftar Pelatihan (now as pie chart)
                 const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
                 new Chart(ageCtx, {
-                    type: 'doughnut',
+                    type: 'pie',
                     data: {
                         labels: ageGroups,
                         datasets: [{
