@@ -44,14 +44,14 @@ Meningkatkan aksesibilitas informasi layanan ketenagakerjaan seperti pelatihan, 
 ---
 
 ## 📁 Struktur Proyek
-<pre><code>```
+<pre><code>
 .
 ├── index.html           # Halaman utama web portal
 ├── README.md            # Dokumentasi proyek
 └── images/
       ├── favicon.png      # Ikon website
       └── pp.png           # Gambar/ikon pendukung
-``` </code></pre>
+</code></pre>
 
 Semua konten diatur dalam satu halaman (`index.html`) dengan navigasi internal ke bagian-bagian berikut:
 - `#tentang-portal`
@@ -66,21 +66,23 @@ Semua konten diatur dalam satu halaman (`index.html`) dengan navigasi internal k
 ## 🚀 Cara Menjalankan Secara Lokal
 
 1. Clone repositori ini:
-<pre><code>```
-bash# git clone https://github.com/4wan-cloud/project-disnaker.git
+<pre><code>
+git clone https://github.com/4wan-cloud/project-disnaker.git
 cd nama-repo
-``` </code></pre>
+</code></pre>
 Buka index.html di browser:
-<pre><code>```
-bash# start index.html
-``` </code></pre>
+<pre><code>
+start index.html
+</code></pre>
 Atau cukup klik dua kali file index.html.
 
 🔧 Rencana Pengembangan
+<pre><code>
   🚀 Integrasi backend untuk menyimpan data form (PHP / Google Sheets / Firebase)
   🚀 Export otomatis data pendaftar pelatihan
   🚀 Tambah sistem notifikasi email
   🚀 Tambah form login admin untuk monitoring data
+</code></pre>  
 
 🤝 Kontribusi
 Silakan fork repositori ini dan buat pull request untuk membantu pengembangan, penyesuaian konten, atau perbaikan desain.
