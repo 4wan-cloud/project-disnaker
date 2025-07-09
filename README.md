@@ -82,12 +82,12 @@ Atau cukup klik dua kali file index.html.
 - Tambah sistem notifikasi email 🚀
 - Tambah form login admin untuk monitoring data 🚀
 
-🤝 Kontribusi
-Silakan fork repositori ini dan buat pull request untuk membantu pengembangan, penyesuaian konten, atau perbaikan desain.
+🤝 Kontribusi  
+  Silakan fork repositori ini dan buat pull request untuk membantu pengembangan, penyesuaian konten, atau perbaikan desain.
 
-📄 Lisensi
-Lisensi: MIT License
-Bebas digunakan dan dimodifikasi untuk keperluan pengembangan pelayanan publik.
+📄 Lisensi  
+  Lisensi: MIT License  
+  Bebas digunakan dan dimodifikasi untuk keperluan pengembangan pelayanan publik.
 
-Dinas Tenaga Kerja Kabupaten Magetan
-Melayani dengan cepat, transparan, dan inklusif melalui teknologi digital.
+Dinas Tenaga Kerja Kabupaten Magetan  
+  Melayani dengan cepat, transparan, dan inklusif melalui teknologi digital.
