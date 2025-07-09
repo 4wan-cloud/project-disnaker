@@ -77,12 +77,10 @@ start index.html
 Atau cukup klik dua kali file index.html.
 
 🔧 Rencana Pengembangan
-<pre><code>
-  🚀 Integrasi backend untuk menyimpan data form (PHP / Google Sheets / Firebase)
-  🚀 Export otomatis data pendaftar pelatihan
-  🚀 Tambah sistem notifikasi email
-  🚀 Tambah form login admin untuk monitoring data
-</code></pre>  
+- Integrasi backend untuk menyimpan data form (PHP / Google Sheets / Firebase) 🚀 
+- Export otomatis data pendaftar pelatihan 🚀
+- Tambah sistem notifikasi email 🚀
+- Tambah form login admin untuk monitoring data 🚀
 
 🤝 Kontribusi
 Silakan fork repositori ini dan buat pull request untuk membantu pengembangan, penyesuaian konten, atau perbaikan desain.
