@@ -1,1 +1,1 @@
-website statis yang mobile friendly untuk penyederhanaan informasi di bagian pelatihan kerja dan penempatan tenaga kerja disnaker magetan
+Website statis yang mobile friendly untuk penyederhanaan informasi di Bidang Pelatihan Kerja dan Penempatan Tenaga Kerja di Dinas Tenaga Kerja Kabupaten Magetan.
