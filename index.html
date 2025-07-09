@@ -186,12 +186,7 @@
                     <canvas id="trainingChart"></canvas>
                 </div>
             </div>
-            <div class="mb-6">
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Tingkat Penyelesaian Pelatihan</h4>
-                <div class="chart-container">
-                    <canvas id="completionChart"></canvas>
-                </div>
-            </div>
+            
             <div>
                 <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Pendaftar Pelatihan</h4>
                 <div class="chart-container">
@@ -293,7 +288,6 @@
                 // Data real pengambilan dari sheet pendaftaran pelatihan
                 const trainingPrograms = ['Pelatihan Bahasa Jepang', 'Desain Grafis', 'Pelatihan Tata Boga', 'Operator Garmen', 'Teknik Pengelasan'];
                 const participants = [208, 69, 130, 160, 278];
-                const completionRates = [96, 94, 100, 98, 99];
                 const ageGroups = ['<20', '20-25', '26-30', '31-35', '>35'];
                 const ageDistribution = [251, 433, 167, 94, 125];
                 
@@ -344,28 +338,28 @@
                     }
                 });
                 
-                // Chart 2: Tingkat Penyelesaian Pelatihan
-                const completionCtx = document.getElementById('completionChart').getContext('2d');
-                new Chart(completionCtx, {
+                // Chart 2: Distribusi Usia Peserta Pendaftar Pelatihan (now as doughnut chart)
+                const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
+                new Chart(ageCtx, {
                     type: 'doughnut',
                     data: {
-                        labels: trainingPrograms,
+                        labels: ageGroups,
                         datasets: [{
-                            label: 'Tingkat Penyelesaian (%)',
-                            data: completionRates,
+                            label: 'Distribusi Usia Pendaftar Pelatihan',
+                            data: ageDistribution,
                             backgroundColor: [
-                                'rgba(59, 130, 246, 0.7)',
-                                'rgba(16, 185, 129, 0.7)',
-                                'rgba(245, 158, 11, 0.7)',
-                                'rgba(139, 92, 246, 0.7)',
-                                'rgba(244, 63, 94, 0.7)'
+                                'rgba(255, 99, 132, 0.7)',
+                                'rgba(54, 162, 235, 0.7)',
+                                'rgba(255, 206, 86, 0.7)',
+                                'rgba(75, 192, 192, 0.7)',
+                                'rgba(153, 102, 255, 0.7)'
                             ],
                             borderColor: [
-                                'rgba(59, 130, 246, 1)',
-                                'rgba(16, 185, 129, 1)',
-                                'rgba(245, 158, 11, 1)',
-                                'rgba(139, 92, 246, 1)',
-                                'rgba(244, 63, 94, 1)'
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)'
                             ],
                             borderWidth: 1
                         }]
@@ -380,45 +374,8 @@
                             tooltip: {
                                 callbacks: {
                                     label: function(context) {
-                                        return `${context.label}: ${context.raw}%`;
+                                        return `${context.label}: ${context.raw} peserta`;
                                     }
-                                }
-                            }
-                        }
-                    }
-                });
-                
-                // Chart 3: Distribusi Usia Peserta Pendaftar Pelatihan
-                const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
-                new Chart(ageCtx, {
-                    type: 'line',
-                    data: {
-                        labels: ageGroups,
-                        datasets: [{
-                            label: 'Distribusi Usia Pendaftar Pelatihan (%)',
-                            data: ageDistribution,
-                            backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                            borderColor: 'rgba(59, 130, 246, 1)',
-                            borderWidth: 2,
-                            tension: 0.4,
-                            fill: true
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Persentase Pendaftar Pelatihan (%)'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Kelompok Usia'
                                 }
                             }
                         }
