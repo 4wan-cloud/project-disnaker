@@ -198,7 +198,7 @@
 
         <!-- JavaScript untuk Dropdown dan Tab -->
         <script>
-            // Toggle menu Dropdown
+            // Alihkan menu Dropdown
             function toggleDropdown() {
                 const dropdownMenu = document.getElementById('dropdownMenu');
                 const dropdownButton = document.getElementById('dropdownButton');
@@ -208,7 +208,7 @@
                     dropdownButton.classList.toggle('active');
                     dropdownButton.setAttribute('aria-expanded', !isExpanded);
                     
-                    // Track dropdown interaction
+                    // Pantau interaksi dropdown
                     if (typeof gtag === 'function') {
                         gtag('event', 'dropdown_interaction', {
                             'event_category': 'Navigation',
@@ -239,7 +239,7 @@
                     tabContent.classList.remove('hidden');
                     tabContent.setAttribute('aria-hidden', 'false');
                     
-                    // Jika tab data pelatihan dipilih, render charts
+                    // Jika tab data pelatihan dipilih, render diagram
                     if (tabName === 'data-pelatihan') {
                         renderCharts();
                     }
@@ -283,7 +283,7 @@
                 }
             }
 
-            // Fungsi untuk render chart
+            // Fungsi untuk render diagram
             function renderCharts() {
                 // Data real pengambilan dari sheet pendaftaran pelatihan
                 const trainingPrograms = ['Pelatihan Bahasa Jepang', 'Desain Grafis', 'Pelatihan Tata Boga', 'Operator Garmen', 'Teknik Pengelasan'];
@@ -291,7 +291,7 @@
                 const ageGroups = ['<20', '20-25', '26-30', '31-35', '>35'];
                 const ageDistribution = [251, 433, 167, 94, 125];
                 
-                // Chart 1: Jumlah Peserta Pendaftar Pelatihan per Program
+                // Diagram 1: Jumlah Peserta Pendaftar Pelatihan per Program (bar chart)
                 const trainingCtx = document.getElementById('trainingChart').getContext('2d');
                 new Chart(trainingCtx, {
                     type: 'bar',
@@ -338,7 +338,7 @@
                     }
                 });
                 
-                // Chart 2: Distribusi Usia Peserta Pendaftar Pelatihan (now as pie chart)
+                // Diagram 2: Distribusi Usia Peserta Pendaftar Pelatihan (pie chart)
                 const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
                 new Chart(ageCtx, {
                     type: 'pie',
@@ -382,7 +382,7 @@
                     }
                 });
             }
-            // Track link Klik untuk Google Analytics
+            // Pantau klik tautan untuk Google Analytics
             document.querySelectorAll('.tab-content a').forEach(link => {
                 link.addEventListener('click', function() {
                     if (typeof gtag === 'function') {
@@ -431,7 +431,7 @@
                 });
             }
 
-            // Keyboard navigation for dropdown
+            // Navigasi Keyboard untuk dropdown
             document.getElementById('dropdownButton').addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -439,9 +439,9 @@
                 }
             });
 
-            // Set default tab to 'tentang'
+            // Set otomatis tab ke 'tentang'
             document.addEventListener('DOMContentLoaded', function() {
-                // Set first tab as active by default
+                // Set tab awal aktif secara otomatis
                 const defaultTab = document.getElementById('tentang');
                 if (defaultTab) {
                     defaultTab.classList.remove('hidden');
