@@ -66,11 +66,14 @@ Semua konten diatur dalam satu halaman (`index.html`) dengan navigasi internal k
 ## 🚀 Cara Menjalankan Secara Lokal
 
 1. Clone repositori ini:
-
+<pre><code>```
 bash# git clone https://github.com/4wan-cloud/project-disnaker.git
 cd nama-repo
+``` </code></pre>
 Buka index.html di browser:
+<pre><code>```
 bash# start index.html
+``` </code></pre>
 Atau cukup klik dua kali file index.html.
 
 🔧 Rencana Pengembangan
