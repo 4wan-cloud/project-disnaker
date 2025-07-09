@@ -2,22 +2,36 @@
 <html lang="id">
 <head>
     <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WBHP4MMD');
-    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBHP4MMD');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal web untuk pelatihan kerja dan penempatan kerja oleh Dinas Tenaga Kerja Magetan.">
     <meta name="keywords" content="Disnaker Magetan, pelatihan kerja, penempatan kerja, kartu AK1, layanan tenaga kerja">
     <title>Disnaker Magetan - Portal Pelatihan & Penempatan Kerja</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://kit.fontawesome.com/0594d25cfd.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/chart.js" as="script">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    
+    <!-- Inline critical CSS -->
+    <style>
+        .tab-content{animation:fadeIn .5s ease-in-out}@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .dropdown-menu{display:none;animation:slideDown .3s ease-in-out}.dropdown-menu.active{display:block}@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        .dropdown-button.active .fa-chevron-down{transform:rotate(180deg);transition:transform .3s ease}
+        .chart-container{position:relative;width:100%;height:300px}
+        .loading-spinner{border:4px solid rgba(0,0,0,.1);border-radius:50%;border-top:4px solid #3498db;width:40px;height:40px;animation:spin 1s linear infinite;margin:20px auto}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    </style>
+    
+    <!-- Deferred non-critical CSS and JS -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-74RZ3RSTGT"></script>
     <script>
@@ -26,65 +40,15 @@
         gtag('js', new Date());
         gtag('config', 'G-74RZ3RSTGT');
     </script>
-    <!-- FontAwesome CDN -->
-    <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous"></script>
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <!-- CSS Kustom -->
-    <style>
-        .tab-content {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .dropdown-menu {
-            display: none;
-            animation: slideDown 0.3s ease-in-out;
-        }
-        .dropdown-menu.active {
-            display: block;
-        }
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .dropdown-button.active .fa-chevron-down {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 300px;
-        }
-        .loading-spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top: 4px solid #3498db;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBHP4MMD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBHP4MMD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         <div class="text-center mb-6">
-            <img src="/images/pp.png" alt="Disnaker Magetan Logo" class="w-20 h-20 mx-auto mb-4" loading="lazy">
+            <img src="/images/pp.png" alt="Disnaker Magetan Logo" class="w-20 h-20 mx-auto mb-4" loading="lazy" width="80" height="80">
             <h1 class="text-xl font-bold text-gray-800">DINAS TENAGA KERJA KABUPATEN MAGETAN</h1>
             <h2 class="text-sm text-gray-600">Bidang Pelatihan dan Penempatan Tenaga Kerja</h2>
         </div>
@@ -92,27 +56,27 @@
         <!-- Navigasi Dropdown -->
         <div class="relative mb-6 w-full mx-auto">
             <button id="dropdownButton" class="dropdown-button w-full px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 hover:scale-105 transition-all duration-300 flex items-center justify-between" onclick="toggleDropdown()" aria-expanded="false" aria-haspopup="true" aria-controls="dropdownMenu">
-                <span id="dropdownText" class="flex items-center"><i class="fas fa-user mr-3"></i>Profil</span>
-                <i class="fas fa-chevron-down"></i>
+                <span id="dropdownText" class="flex items-center"><i class="fas fa-user mr-3" aria-hidden="true"></i>Profil</span>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </button>
             <ul id="dropdownMenu" class="dropdown-menu absolute w-full mt-2 bg-white shadow-lg rounded-md z-10" role="menu">
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'tentang')" role="menuitem"><i class="fa-solid fa-id-card-clip mr-3"></i>Tentang Web Portal</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'tentang')" role="menuitem"><i class="fa-solid fa-id-card-clip mr-3" aria-hidden="true"></i>Tentang Web Portal</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'media-sosial')" role="menuitem"><i class="fa-solid fa-hashtag mr-3"></i>Media Sosial & Website Dinas</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'media-sosial')" role="menuitem"><i class="fa-solid fa-hashtag mr-3" aria-hidden="true"></i>Media Sosial & Website Dinas</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'pelatihan')" role="menuitem"><i class="fa-solid fa-graduation-cap mr-3"></i>Form Untuk Pelatihan Kerja</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'pelatihan')" role="menuitem"><i class="fa-solid fa-graduation-cap mr-3" aria-hidden="true"></i>Form Untuk Pelatihan Kerja</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'penempatan')" role="menuitem"><i class="fa-solid fa-briefcase mr-3"></i>Form Untuk Pemberi Lowongan Kerja</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'penempatan')" role="menuitem"><i class="fa-solid fa-briefcase mr-3" aria-hidden="true"></i>Form Untuk Pemberi Lowongan Kerja</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'ak1')" role="menuitem"><i class="fa-solid fa-earth-asia mr-3"></i>Pendaftaran Online Kartu AK1</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'ak1')" role="menuitem"><i class="fa-solid fa-earth-asia mr-3" aria-hidden="true"></i>Pendaftaran Online Kartu AK1</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3"></i>Visualisasi Data Monitoring Pelatihan</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3" aria-hidden="true"></i>Visualisasi Data Monitoring Pelatihan</button>
                 </li>
             </ul>
         </div>
@@ -130,10 +94,10 @@
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Media Sosial & Website Resmi</h3>
             <p class="text-gray-600 text-sm mb-4">Ikuti kami di media sosial untuk mendapatkan update terbaru dari Dinas Tenaga Kerja Kabupaten Magetan.</p>
             <div class="grid grid-cols-1 gap-3">
-                <a href="https://instagram.com/disnaker.magetan" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-pink-500 to-pink-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-instagram mr-2"></i> Instagram</a>
-                <a href="https://tiktok.com/@disnaker.mgt" target="_blank" rel="noopener noreferrer" class="block bg-gray-900 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-tiktok mr-2"></i> TikTok</a>
-                <a href="https://threads.net/@disnaker.magetan" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-threads mr-2"></i> Threads</a>
-                <a href="https://disnaker.magetan.go.id" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-sitemap mr-2"></i> Website Resmi Disnaker</a>
+                <a href="https://instagram.com/disnaker.magetan" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-pink-500 to-pink-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i> Instagram</a>
+                <a href="https://tiktok.com/@disnaker.mgt" target="_blank" rel="noopener noreferrer" class="block bg-gray-900 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-tiktok mr-2" aria-hidden="true"></i> TikTok</a>
+                <a href="https://threads.net/@disnaker.magetan" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-threads mr-2" aria-hidden="true"></i> Threads</a>
+                <a href="https://disnaker.magetan.go.id" target="_blank" rel="noopener noreferrer" class="block bg-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-sitemap mr-2" aria-hidden="true"></i> Website Resmi Disnaker</a>
             </div>
             <p class="text-gray-600 text-sm mt-4">Kunjungi website resmi diatas untuk informasi lebih lanjut tentang layanan dan program kami.</p>
         </div>
@@ -142,8 +106,8 @@
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Pelatihan Kerja</h3>
             <p class="text-gray-600 text-sm mb-4">Daftar pelatihan kerja untuk meningkatkan keterampilan Anda melalui program kami.</p>
             <div class="grid grid-cols-1 gap-3">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBKuTjgNPFFBfwt8K2dqgkdF26ys48QVbQC6_U87EcaCp-dA/viewform" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-user-check mr-2"></i> Form Pendaftaran Pelatihan</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSOJj4FkMxkz3ZON-U6z9_qnU0_zZmZhfhHF1BizVhFRhl2Q/viewform" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-user-tie mr-2"></i> Form Konsultasi/Usulan Pelatihan</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBKuTjgNPFFBfwt8K2dqgkdF26ys48QVbQC6_U87EcaCp-dA/viewform" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-user-check mr-2" aria-hidden="true"></i> Form Pendaftaran Pelatihan</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSOJj4FkMxkz3ZON-U6z9_qnU0_zZmZhfhHF1BizVhFRhl2Q/viewform" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-user-tie mr-2" aria-hidden="true"></i> Form Konsultasi/Usulan Pelatihan</a>
             </div>
             <p class="text-gray-600 text-sm mt-4">Ajukan usulan pelatihan atau konsultasi untuk kebutuhan spesifik Anda.<br>Hubungi kami untuk informasi lebih lanjut.</p>
         </div>
@@ -152,8 +116,8 @@
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Penempatan Kerja</h3>
             <p class="text-gray-600 text-sm mb-4">Form bagi perusahaan atau pemberi kerja yang ingin mengajukan lowongan pekerjaan.</p>
             <div class="grid grid-cols-1 gap-3">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQz_E9R0frdIHlWRc2_n5faKof-aZv8tbcYspzAQDAMZQH7A/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-handshake mr-2"></i> Form Upload Data Bagi Pemberi Lowongan</a>
-                <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-whatsapp mr-2"></i> Konfirmasi via WhatsApp Setelah Mengisi Form</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQz_E9R0frdIHlWRc2_n5faKof-aZv8tbcYspzAQDAMZQH7A/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-handshake mr-2" aria-hidden="true"></i> Form Upload Data Bagi Pemberi Lowongan</a>
+                <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i> Konfirmasi via WhatsApp Setelah Mengisi Form</a>
             </div>
         </div>
         
@@ -161,7 +125,7 @@
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Kartu AK1 (Kartu Kuning)</h3>
             <p class="text-gray-600 text-sm mb-4">Pendaftaran online untuk Kartu AK1 (Kartu Kuning) yang diperlukan untuk pencari kerja.</p>
             <div class="grid grid-cols-1 gap-3">
-                <a href="https://siapkerja.kemnaker.go.id/app/home" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-address-card mr-2"></i> Pendaftaran Kartu AK1 Online</a>
+                <a href="https://siapkerja.kemnaker.go.id/app/home" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-address-card mr-2" aria-hidden="true"></i> Pendaftaran Kartu AK1 Online</a>
             </div>
             <div class="mt-4 p-4 bg-gray-50 rounded-md">
                 <h4 class="font-semibold text-gray-800 text-sm mb-2">Persyaratan Pendaftaran dan Cetak Kartu AK1:</h4>
@@ -183,14 +147,14 @@
             <div class="mb-6">
                 <h4 class="font-semibold text-gray-800 text-sm mb-2">Jumlah Pendaftar Pelatihan per Program</h4>
                 <div class="chart-container">
-                    <canvas id="trainingChart"></canvas>
+                    <canvas id="trainingChart" aria-label="Diagram batang jumlah pendaftar pelatihan per program"></canvas>
                 </div>
             </div>
             
             <div>
                 <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Pendaftar Pelatihan</h4>
                 <div class="chart-container">
-                    <canvas id="ageDistributionChart"></canvas>
+                    <canvas id="ageDistributionChart" aria-label="Diagram pie distribusi usia pendaftar pelatihan"></canvas>
                 </div>
             </div>
             <p class="text-gray-600 text-sm mt-4">Untuk informasi lebih lanjut, hubungi kami melalui Media Sosial kami.</p>
@@ -198,76 +162,73 @@
 
         <!-- JavaScript untuk Dropdown dan Tab -->
         <script>
-            // Alihkan menu Dropdown
+            // Menyimpan referensi elemen DOM
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const dropdownButton = document.getElementById('dropdownButton');
+            const dropdownText = document.getElementById('dropdownText');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const whatsappLink = document.querySelector('a[href="https://wa.me/6289524176626"]');
+            
+            // Alihkan tampilan menu dropdown
             function toggleDropdown() {
-                const dropdownMenu = document.getElementById('dropdownMenu');
-                const dropdownButton = document.getElementById('dropdownButton');
-                if (dropdownMenu && dropdownButton) {
-                    const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
-                    dropdownMenu.classList.toggle('active');
-                    dropdownButton.classList.toggle('active');
-                    dropdownButton.setAttribute('aria-expanded', !isExpanded);
-                    
-                    // Pantau interaksi dropdown
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'dropdown_interaction', {
-                            'event_category': 'Navigation',
-                            'event_label': isExpanded ? 'Dropdown Closed' : 'Dropdown Opened'
-                        });
-                    }
+                const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
+                dropdownMenu.classList.toggle('active');
+                dropdownButton.classList.toggle('active');
+                dropdownButton.setAttribute('aria-expanded', !isExpanded);
+                
+                // Lacak interaksi dropdown
+                if (typeof gtag === 'function') {
+                    gtag('event', 'dropdown_interaction', {
+                        'event_category': 'Navigation',
+                        'event_label': isExpanded ? 'Dropdown Closed' : 'Dropdown Opened'
+                    });
                 }
             }
 
-            // Logika pergantian Tab
+            // Berpindah antar tab
             function openTab(event, tabName) {
-                // Sembunyikan semua isi tab
-                document.querySelectorAll('.tab-content').forEach(tab => {
+                // Sembunyikan semua konten tab
+                tabContents.forEach(tab => {
                     tab.classList.add('hidden');
                     tab.setAttribute('aria-hidden', 'true');
                 });
 
                 // Reset semua tombol tab
-                document.querySelectorAll('.tab-button').forEach(button => {
+                tabButtons.forEach(button => {
                     button.classList.remove('bg-green-600', 'text-white', 'active');
                     button.classList.add('text-gray-800');
                     button.setAttribute('aria-selected', 'false');
                 });
 
-                // Menampilkan isi Tab yang dipilih
+                // Tampilkan konten tab yang dipilih
                 const tabContent = document.getElementById(tabName);
                 if (tabContent) {
                     tabContent.classList.remove('hidden');
                     tabContent.setAttribute('aria-hidden', 'false');
                     
-                    // Jika tab data pelatihan dipilih, render diagram
+                    // Render grafik jika tab data-pelatihan dipilih
                     if (tabName === 'data-pelatihan') {
                         renderCharts();
                     }
-                } else {
-                    console.error(`Tab with ID "${tabName}" not found`);
-                    return;
                 }
 
-                // Style untuk tombol yang di klik
-                if (event.currentTarget) {
-                    event.currentTarget.classList.remove('text-gray-800');
-                    event.currentTarget.classList.add('bg-green-600', 'text-white', 'active');
-                    event.currentTarget.setAttribute('aria-selected', 'true');
+                // Gaya untuk tombol yang diklik
+                const clickedButton = event.currentTarget;
+                clickedButton.classList.remove('text-gray-800');
+                clickedButton.classList.add('bg-green-600', 'text-white', 'active');
+                clickedButton.setAttribute('aria-selected', 'true');
 
-                    // Update Tombol dropdown text dan ikon
-                    const dropdownText = document.getElementById('dropdownText');
-                    if (dropdownText) {
-                        const icon = event.currentTarget.querySelector('i').cloneNode(true);
-                        const text = event.currentTarget.textContent.trim();
-                        dropdownText.innerHTML = '';
-                        dropdownText.appendChild(icon);
-                        dropdownText.appendChild(document.createTextNode(text));
-                    }
+                // Perbarui teks dan ikon dropdown
+                if (dropdownText) {
+                    const icon = clickedButton.querySelector('i').cloneNode(true);
+                    const text = clickedButton.textContent.trim();
+                    dropdownText.innerHTML = '';
+                    dropdownText.appendChild(icon);
+                    dropdownText.appendChild(document.createTextNode(text));
                 }
 
                 // Tutup dropdown
-                const dropdownMenu = document.getElementById('dropdownMenu');
-                const dropdownButton = document.getElementById('dropdownButton');
                 if (dropdownMenu && dropdownButton) {
                     dropdownMenu.classList.remove('active');
                     dropdownButton.classList.remove('active');
@@ -283,170 +244,149 @@
                 }
             }
 
-            // Fungsi untuk render diagram
+            // Tampilkan grafik
             function renderCharts() {
-                // Data real pengambilan dari sheet pendaftaran pelatihan
+                // Data untuk grafik
                 const trainingPrograms = ['Pelatihan Bahasa Jepang', 'Desain Grafis', 'Pelatihan Tata Boga', 'Operator Garmen', 'Teknik Pengelasan'];
                 const participants = [208, 69, 130, 160, 278];
                 const ageGroups = ['<20', '20-25', '26-30', '31-35', '>35'];
                 const ageDistribution = [251, 433, 167, 94, 125];
                 
-                // Diagram 1: Jumlah Peserta Pendaftar Pelatihan per Program (bar chart)
-                const trainingCtx = document.getElementById('trainingChart').getContext('2d');
-                new Chart(trainingCtx, {
-                    type: 'bar',
-                    data: {
-                        labels: trainingPrograms,
-                        datasets: [{
-                            label: 'Jumlah Pendaftar Pelatihan',
-                            data: participants,
-                            backgroundColor: [
-                                'rgba(59, 130, 246, 0.7)',
-                                'rgba(16, 185, 129, 0.7)',
-                                'rgba(245, 158, 11, 0.7)',
-                                'rgba(139, 92, 246, 0.7)',
-                                'rgba(244, 63, 94, 0.7)'
-                            ],
-                            borderColor: [
-                                'rgba(59, 130, 246, 1)',
-                                'rgba(16, 185, 129, 1)',
-                                'rgba(245, 158, 11, 1)',
-                                'rgba(139, 92, 246, 1)',
-                                'rgba(244, 63, 94, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Jumlah Pendaftar Pelatihan'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: 'Program Pelatihan'
-                                }
+                // Grafik batang untuk program pelatihan
+                new Chart(
+                    document.getElementById('trainingChart').getContext('2d'),
+                    {
+                        type: 'bar',
+                        data: {
+                            labels: trainingPrograms,
+                            datasets: [{
+                                label: 'Jumlah Pendaftar Pelatihan',
+                                data: participants,
+                                backgroundColor: [
+                                    'rgba(59, 130, 246, 0.7)',
+                                    'rgba(16, 185, 129, 0.7)',
+                                    'rgba(245, 158, 11, 0.7)',
+                                    'rgba(139, 92, 246, 0.7)',
+                                    'rgba(244, 63, 94, 0.7)'
+                                ],
+                                borderColor: [
+                                    'rgba(59, 130, 246, 1)',
+                                    'rgba(16, 185, 129, 1)',
+                                    'rgba(245, 158, 11, 1)',
+                                    'rgba(139, 92, 246, 1)',
+                                    'rgba(244, 63, 94, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: { beginAtZero: true, title: { display: true, text: 'Jumlah Pendaftar Pelatihan' } },
+                                x: { title: { display: true, text: 'Program Pelatihan' } }
                             }
                         }
                     }
-                });
+                );
                 
-                // Diagram 2: Distribusi Usia Peserta Pendaftar Pelatihan (pie chart)
-                const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
-                new Chart(ageCtx, {
-                    type: 'pie',
-                    data: {
-                        labels: ageGroups,
-                        datasets: [{
-                            label: 'Distribusi Usia Pendaftar Pelatihan',
-                            data: ageDistribution,
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.7)',
-                                'rgba(54, 162, 235, 0.7)',
-                                'rgba(255, 206, 86, 0.7)',
-                                'rgba(75, 192, 192, 0.7)',
-                                'rgba(153, 102, 255, 0.7)'
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'right',
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        return `${context.label}: ${context.raw} peserta`;
+                // Grafik pie untuk distribusi usia
+                new Chart(
+                    document.getElementById('ageDistributionChart').getContext('2d'),
+                    {
+                        type: 'pie',
+                        data: {
+                            labels: ageGroups,
+                            datasets: [{
+                                label: 'Distribusi Usia Pendaftar Pelatihan',
+                                data: ageDistribution,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.7)',
+                                    'rgba(54, 162, 235, 0.7)',
+                                    'rgba(255, 206, 86, 0.7)',
+                                    'rgba(75, 192, 192, 0.7)',
+                                    'rgba(153, 102, 255, 0.7)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { position: 'right' },
+                                tooltip: {
+                                    callbacks: {
+                                        label: context => `${context.label}: ${context.raw} peserta`
                                     }
                                 }
                             }
                         }
                     }
-                });
+                );
             }
-            // Pantau klik tautan untuk Google Analytics
-            document.querySelectorAll('.tab-content a').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'link_click', {
-                            'event_category': 'Link',
-                            'event_label': this.href
-                        });
-                    }
-                });
-            });
 
-            // Tutup dropdown ketika klik luar area
-            document.addEventListener('click', (event) => {
-                const dropdown = document.querySelector('.relative');
-                if (dropdown && !dropdown.contains(event.target)) {
-                    const dropdownMenu = document.getElementById('dropdownMenu');
-                    const dropdownButton = document.getElementById('dropdownButton');
-                    if (dropdownMenu && dropdownButton) {
-                        dropdownMenu.classList.remove('active');
-                        dropdownButton.classList.remove('active');
-                        dropdownButton.setAttribute('aria-expanded', 'false');
-                    }
-                }
-            });
-            
-            // Pesan konfirmasi tautan WhatsApp
-            const whatsappLink = document.querySelector('a[href="https://wa.me/6289524176626"]');
-            if (whatsappLink) {
-                whatsappLink.addEventListener('click', (e) => {
-                    if (!confirm('Anda akan dialihkan ke WhatsApp untuk mengonfirmasi pengajuan lowongan kerja. Lanjutkan?')) {
-                        e.preventDefault();
+            // Listener saat dokumen selesai dimuat
+            document.addEventListener('DOMContentLoaded', () => {
+                // Set tab default
+                document.getElementById('tentang').classList.remove('hidden');
+                document.getElementById('tentang').setAttribute('aria-hidden', 'false');
+                
+                // Lacak klik pada tautan
+                document.querySelectorAll('.tab-content a').forEach(link => {
+                    link.addEventListener('click', function() {
                         if (typeof gtag === 'function') {
-                            gtag('event', 'whatsapp_link_cancel', {
+                            gtag('event', 'link_click', {
                                 'event_category': 'Link',
-                                'event_label': 'WhatsApp Confirmation Cancelled'
+                                'event_label': this.href
                             });
                         }
-                    } else {
-                        if (typeof gtag === 'function') {
+                    });
+                });
+                
+                // Konfirmasi WhatsApp
+                if (whatsappLink) {
+                    whatsappLink.addEventListener('click', (e) => {
+                        if (!confirm('Anda akan dialihkan ke WhatsApp untuk mengonfirmasi pengajuan lowongan kerja. Lanjutkan?')) {
+                            e.preventDefault();
+                            if (typeof gtag === 'function') {
+                                gtag('event', 'whatsapp_link_cancel', {
+                                    'event_category': 'Link',
+                                    'event_label': 'WhatsApp Confirmation Cancelled'
+                                });
+                            }
+                        } else if (typeof gtag === 'function') {
                             gtag('event', 'whatsapp_link_confirm', {
                                 'event_category': 'Link',
                                 'event_label': 'WhatsApp Confirmation Proceed'
                             });
                         }
+                    });
+                }
+                
+                // Navigasi keyboard untuk dropdown
+                dropdownButton.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleDropdown();
                     }
                 });
-            }
-
-            // Navigasi Keyboard untuk dropdown
-            document.getElementById('dropdownButton').addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleDropdown();
-                }
-            });
-
-            // Set otomatis tab ke 'tentang'
-            document.addEventListener('DOMContentLoaded', function() {
-                // Set tab awal aktif secara otomatis
-                const defaultTab = document.getElementById('tentang');
-                if (defaultTab) {
-                    defaultTab.classList.remove('hidden');
-                    defaultTab.setAttribute('aria-hidden', 'false');
-                }
+                
+                // Tutup dropdown jika klik di luar area
+                document.addEventListener('click', (event) => {
+                    if (!event.target.closest('.relative')) {
+                        dropdownMenu.classList.remove('active');
+                        dropdownButton.classList.remove('active');
+                        dropdownButton.setAttribute('aria-expanded', 'false');
+                    }
+                });
             });
         </script>
     </div>
