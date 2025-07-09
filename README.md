@@ -44,14 +44,14 @@ Meningkatkan aksesibilitas informasi layanan ketenagakerjaan seperti pelatihan, 
 ---
 
 ## 📁 Struktur Proyek
-
+<pre><code>```
 .
-  ├── index.html # Halaman utama web portal
-  ├── README.md # Dokumentasi proyek
-  └── images/
-        ├── favicon.png # Ikon website
-        └── pp.png # Gambar/ikon pendukung
-
+├── index.html           # Halaman utama web portal
+├── README.md            # Dokumentasi proyek
+└── images/
+      ├── favicon.png      # Ikon website
+      └── pp.png           # Gambar/ikon pendukung
+``` </code></pre>
 
 Semua konten diatur dalam satu halaman (`index.html`) dengan navigasi internal ke bagian-bagian berikut:
 - `#tentang-portal`
