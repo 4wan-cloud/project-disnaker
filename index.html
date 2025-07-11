@@ -32,7 +32,7 @@
     <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous"></script>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!--panels>    <!-- Ikon Favicon -->
+    <!-- Ikon Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <!-- Gaya CSS Kustom -->
     <style>
@@ -204,11 +204,13 @@
         <div id="bkk" class="tab-content hidden" role="tabpanel">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Upload Data BKK</h3>
             <p class="text-gray-600 text-sm mb-4">Form untuk mengunggah data dari Bursa Kerja Khusus (BKK) dan mengunduh contoh format pelaporan.</p>
+            <div id="bkk-loading" class="loading-spinner hidden"></div>
             <div class="grid grid-cols-1 gap-3">
-                <a href="https://forms.gle/QuPk4gcHYTERCjb89" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-upload mr-2"></i> Form Upload Data BKK</a>
-                <a href="/files/contoh-format-pelaporan-bkk.pdf" download class="block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-download mr-2"></i> Contoh Format Pelaporan BKK</a>
+                <a href="https://forms.gle/QuPk4gcHYTERCjb89" target="_blank" rel="noopener noreferrer" aria-label="Buka form untuk mengunggah data BKK" class="block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-upload mr-2"></i> Form Upload Data BKK</a>
+                <a href="/files/contoh-format-pelaporan-bkk.pdf" download aria-label="Unduh contoh format pelaporan BKK" class="block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-download mr-2"></i> Contoh Format Pelaporan BKK</a>
             </div>
-            <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan. Unduh contoh format untuk panduan pelaporan.</p>
+            <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan (Excel atau CSV). Unduh contoh format untuk panduan pelaporan.</p>
+            <p class="text-gray-600 text-sm mt-2">Jika form tidak dapat diakses, hubungi kami melalui <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">WhatsApp</a>.</p>
         </div>
 
         <!-- JavaScript untuk Dropdown dan Tab -->
@@ -254,6 +256,15 @@
                     tabContent.classList.remove('hidden');
                     tabContent.setAttribute('aria-hidden', 'false');
                     
+                    // Tampilkan spinner untuk BKK tab
+                    const bkkLoading = document.getElementById('bkk-loading');
+                    if (bkkLoading && tabName === 'bkk') {
+                        bkkLoading.classList.remove('hidden');
+                        setTimeout(() => {
+                            bkkLoading.classList.add('hidden');
+                        }, 1000);
+                    }
+
                     // Jika tab data pelatihan dipilih, render diagram
                     if (tabName === 'data-pelatihan') {
                         renderCharts();
@@ -397,6 +408,7 @@
                     }
                 });
             }
+
             // Pantau klik tautan untuk Google Analytics
             document.querySelectorAll('.tab-content a').forEach(link => {
                 link.addEventListener('click', function() {
@@ -422,12 +434,11 @@
                     }
                 }
             });
-            
-            // Pesan konfirmasi tautan WhatsApp
-            const whatsappLink = document.querySelector('a[href="https://wa.me/6289524176626"]');
-            if (whatsappLink) {
+
+            // Pesan konfirmasi tautan WhatsApp (untuk semua WhatsApp links)
+            document.querySelectorAll('a[href="https://wa.me/6289524176626"]').forEach(whatsappLink => {
                 whatsappLink.addEventListener('click', (e) => {
-                    if (!confirm('Anda akan dialihkan ke WhatsApp untuk mengonfirmasi pengajuan lowongan kerja. Lanjutkan?')) {
+                    if (!confirm('Anda akan dialihkan ke WhatsApp untuk mengonfirmasi atau menghubungi kami. Lanjutkan?')) {
                         e.preventDefault();
                         if (typeof gtag === 'function') {
                             gtag('event', 'whatsapp_link_cancel', {
@@ -440,6 +451,29 @@
                             gtag('event', 'whatsapp_link_confirm', {
                                 'event_category': 'Link',
                                 'event_label': 'WhatsApp Confirmation Proceed'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Pesan konfirmasi tautan BKK Form
+            const bkkFormLink = document.querySelector('a[href="https://forms.gle/QuPk4gcHYTERCjb89"]');
+            if (bkkFormLink) {
+                bkkFormLink.addEventListener('click', (e) => {
+                    if (!confirm('Anda akan dialihkan ke Google Form untuk mengunggah data BKK. Lanjutkan?')) {
+                        e.preventDefault();
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'bkk_form_link_cancel', {
+                                'event_category': 'Link',
+                                'event_label': 'BKK Form Link Cancelled'
+                            });
+                        }
+                    } else {
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'bkk_form_link_confirm', {
+                                'event_category': 'Link',
+                                'event_label': 'BKK Form Link Proceed'
                             });
                         }
                     }
