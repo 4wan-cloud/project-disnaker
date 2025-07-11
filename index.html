@@ -114,10 +114,10 @@
                     <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'ak1')" role="menuitem"><i class="fa-solid fa-earth-asia mr-3"></i>Pendaftaran Online Kartu AK1</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3"></i>Visualisasi Data Monitoring Pelatihan</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'bkk')" role="menuitem"><i class="fa-solid fa-upload mr-3"></i>Upload Data BKK</button>
                 </li>
                 <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'bkk')" role="menuitem"><i class="fa-solid fa-upload mr-3"></i>Upload Data BKK</button>
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3"></i>Visualisasi Data Monitoring Pelatihan</button>
                 </li>
             </ul>
         </div>
@@ -181,6 +181,17 @@
             </div>
         </div>
         
+        <div id="bkk" class="tab-content hidden" role="tabpanel">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Upload Data BKK</h3>
+            <p class="text-gray-600 text-sm mb-4">Form untuk mengunggah data dari Bursa Kerja Khusus (BKK) dan mengunduh contoh format pelaporan.</p>
+            <div class="grid grid-cols-1 gap-3">
+                <a href="https://forms.gle/QuPk4gcHYTERCjb89" target="_blank" rel="noopener noreferrer" aria-label="Buka form untuk mengunggah data BKK" class="block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-upload mr-2"></i> Form Upload Data BKK</a>
+                <a href="/files/contoh-format-pelaporan-bkk.pdf" download aria-label="Unduh contoh format pelaporan BKK" class="block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-download mr-2"></i> Contoh Format Pelaporan BKK</a>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan (Excel atau CSV). Unduh contoh format untuk panduan pelaporan.</p>
+            <p class="text-gray-600 text-sm mt-2">Jika form tidak dapat diakses, hubungi kami melalui <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">WhatsApp</a>.</p>
+        </div>
+
         <div id="data-pelatihan" class="tab-content hidden" role="tabpanel">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Data Monitoring Pelatihan</h3>
             <p class="text-gray-600 text-sm mb-4">Visualisasi data pelatihan Semester I Tahun 2025 dalam bentuk grafik interaktif.</p>
@@ -199,17 +210,6 @@
                 </div>
             </div>
             <p class="text-gray-600 text-sm mt-4">Untuk informasi lebih lanjut, hubungi kami melalui Media Sosial kami.</p>
-        </div>
-
-        <div id="bkk" class="tab-content hidden" role="tabpanel">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Upload Data BKK</h3>
-            <p class="text-gray-600 text-sm mb-4">Form untuk mengunggah data dari Bursa Kerja Khusus (BKK) dan mengunduh contoh format pelaporan.</p>
-            <div class="grid grid-cols-1 gap-3">
-                <a href="https://forms.gle/QuPk4gcHYTERCjb89" target="_blank" rel="noopener noreferrer" aria-label="Buka form untuk mengunggah data BKK" class="block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-upload mr-2"></i> Form Upload Data BKK</a>
-                <a href="/files/contoh-format-pelaporan-bkk.pdf" download aria-label="Unduh contoh format pelaporan BKK" class="block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-download mr-2"></i> Contoh Format Pelaporan BKK</a>
-            </div>
-            <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan (Excel atau CSV). Unduh contoh format untuk panduan pelaporan.</p>
-            <p class="text-gray-600 text-sm mt-2">Jika form tidak dapat diakses, hubungi kami melalui <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">WhatsApp</a>.</p>
         </div>
 
         <!-- JavaScript untuk Dropdown dan Tab -->
