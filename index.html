@@ -108,6 +108,9 @@
                     <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'pelatihan')" role="menuitem"><i class="fa-solid fa-graduation-cap mr-3"></i>Form Untuk Pelatihan Kerja</button>
                 </li>
                 <li role="none">
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3"></i>Visualisasi Data Monitoring Pelatihan</button>
+                </li>
+                <li role="none">
                     <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'penempatan')" role="menuitem"><i class="fa-solid fa-briefcase mr-3"></i>Form Untuk Pemberi Lowongan Kerja</button>
                 </li>
                 <li role="none">
@@ -115,9 +118,6 @@
                 </li>
                 <li role="none">
                     <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'bkk')" role="menuitem"><i class="fa-solid fa-upload mr-3"></i>Upload Data BKK</button>
-                </li>
-                <li role="none">
-                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3"></i>Visualisasi Data Monitoring Pelatihan</button>
                 </li>
             </ul>
         </div>
@@ -151,6 +151,26 @@
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSOJj4FkMxkz3ZON-U6z9_qnU0_zZmZhfhHF1BizVhFRhl2Q/viewform" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-user-tie mr-2"></i> Form Konsultasi/Usulan Pelatihan</a>
             </div>
             <p class="text-gray-600 text-sm mt-4">Ajukan usulan pelatihan atau konsultasi untuk kebutuhan spesifik Anda.<br>Hubungi kami untuk informasi lebih lanjut.</p>
+        </div>
+        
+        <div id="data-pelatihan" class="tab-content hidden" role="tabpanel">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Data Monitoring Pelatihan</h3>
+            <p class="text-gray-600 text-sm mb-4">Visualisasi data pelatihan Semester I Tahun 2025 dalam bentuk grafik interaktif.</p>
+            
+            <div class="mb-6">
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Jumlah Pendaftar Pelatihan per Program</h4>
+                <div class="chart-container">
+                    <canvas id="trainingChart"></canvas>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Pendaftar Pelatihan</h4>
+                <div class="chart-container">
+                    <canvas id="ageDistributionChart"></canvas>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">Untuk informasi lebih lanjut, hubungi kami melalui Media Sosial kami.</p>
         </div>
         
         <div id="penempatan" class="tab-content hidden" role="tabpanel">
@@ -190,26 +210,6 @@
             </div>
             <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan (Excel atau CSV). Unduh contoh format untuk panduan pelaporan.</p>
             <p class="text-gray-600 text-sm mt-2">Jika form tidak dapat diakses, hubungi kami melalui <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">WhatsApp</a>.</p>
-        </div>
-
-        <div id="data-pelatihan" class="tab-content hidden" role="tabpanel">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">Data Monitoring Pelatihan</h3>
-            <p class="text-gray-600 text-sm mb-4">Visualisasi data pelatihan Semester I Tahun 2025 dalam bentuk grafik interaktif.</p>
-            
-            <div class="mb-6">
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Jumlah Pendaftar Pelatihan per Program</h4>
-                <div class="chart-container">
-                    <canvas id="trainingChart"></canvas>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold text-gray-800 text-sm mb-2">Distribusi Usia Pendaftar Pelatihan</h4>
-                <div class="chart-container">
-                    <canvas id="ageDistributionChart"></canvas>
-                </div>
-            </div>
-            <p class="text-gray-600 text-sm mt-4">Untuk informasi lebih lanjut, hubungi kami melalui Media Sosial kami.</p>
         </div>
 
         <!-- JavaScript untuk Dropdown dan Tab -->
