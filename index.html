@@ -204,7 +204,6 @@
         <div id="bkk" class="tab-content hidden" role="tabpanel">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Upload Data BKK</h3>
             <p class="text-gray-600 text-sm mb-4">Form untuk mengunggah data dari Bursa Kerja Khusus (BKK) dan mengunduh contoh format pelaporan.</p>
-            <div id="bkk-loading" class="loading-spinner hidden"></div>
             <div class="grid grid-cols-1 gap-3">
                 <a href="https://forms.gle/QuPk4gcHYTERCjb89" target="_blank" rel="noopener noreferrer" aria-label="Buka form untuk mengunggah data BKK" class="block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-upload mr-2"></i> Form Upload Data BKK</a>
                 <a href="/files/contoh-format-pelaporan-bkk.pdf" download aria-label="Unduh contoh format pelaporan BKK" class="block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-download mr-2"></i> Contoh Format Pelaporan BKK</a>
@@ -256,15 +255,6 @@
                     tabContent.classList.remove('hidden');
                     tabContent.setAttribute('aria-hidden', 'false');
                     
-                    // Tampilkan spinner untuk BKK tab
-                    const bkkLoading = document.getElementById('bkk-loading');
-                    if (bkkLoading && tabName === 'bkk') {
-                        bkkLoading.classList.remove('hidden');
-                        setTimeout(() => {
-                            bkkLoading.classList.add('hidden');
-                        }, 1000);
-                    }
-
                     // Jika tab data pelatihan dipilih, render diagram
                     if (tabName === 'data-pelatihan') {
                         renderCharts();
