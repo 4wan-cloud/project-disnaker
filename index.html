@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal web untuk pelatihan kerja dan penempatan kerja oleh Dinas Tenaga Kerja Magetan.">
-    <meta name="keywords" content="Disnaker Magetan, pelatihan kerja, penempatan kerja, kartu AK1, layanan tenaga kerja">
+    <meta name="keywords" content="Disnaker Magetan, pelatihan kerja, penempatan kerja, kartu AK1, layanan tenaga kerja, BKK">
     <title>Disnaker Magetan - Portal Pelatihan & Penempatan Kerja</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,7 +32,7 @@
     <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous"></script>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Ikon Favicon -->
+    <!--panels>    <!-- Ikon Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <!-- Gaya CSS Kustom -->
     <style>
@@ -116,6 +116,9 @@
                 <li role="none">
                     <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'data-pelatihan')" role="menuitem"><i class="fa-solid fa-chart-pie mr-3"></i>Visualisasi Data Monitoring Pelatihan</button>
                 </li>
+                <li role="none">
+                    <button class="tab-button w-full px-4 py-2 text-gray-800 text-sm hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center" onclick="openTab(event, 'bkk')" role="menuitem"><i class="fa-solid fa-upload mr-3"></i>Upload Data BKK</button>
+                </li>
             </ul>
         </div>
 
@@ -196,6 +199,16 @@
                 </div>
             </div>
             <p class="text-gray-600 text-sm mt-4">Untuk informasi lebih lanjut, hubungi kami melalui Media Sosial kami.</p>
+        </div>
+
+        <div id="bkk" class="tab-content hidden" role="tabpanel">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Upload Data BKK</h3>
+            <p class="text-gray-600 text-sm mb-4">Form untuk mengunggah data dari Bursa Kerja Khusus (BKK) dan mengunduh contoh format pelaporan.</p>
+            <div class="grid grid-cols-1 gap-3">
+                <a href="https://docs.google.com/forms/d/e/BKK_UPLOAD_FORM_ID/viewform" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-upload mr-2"></i> Form Upload Data BKK</a>
+                <a href="/files/contoh-format-pelaporan-bkk.pdf" download class="block bg-gradient-to-r from-teal-500 to-teal-600 text-white text-center py-3 rounded-md hover:scale-105 transition-transform text-sm"><i class="fa-solid fa-download mr-2"></i> Contoh Format Pelaporan BKK</a>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan. Unduh contoh format untuk panduan pelaporan.</p>
         </div>
 
         <!-- JavaScript untuk Dropdown dan Tab -->
