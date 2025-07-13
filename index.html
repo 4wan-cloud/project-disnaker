@@ -453,6 +453,29 @@
                 });
             }
 
+            // Pesan konfirmasi untuk tautan unduhan contoh.xlsx
+const downloadLink = document.querySelector('a[href="/src/contoh.xlsx"]');
+if (downloadLink) {
+    downloadLink.addEventListener('click', (e) => {
+        if (!confirm('Anda akan mengunduh file contoh format pelaporan BKK (contoh.xlsx). Lanjutkan?')) {
+            e.preventDefault();
+            if (typeof gtag === 'function') {
+                gtag('event', 'download_link_cancel', {
+                    'event_category': 'Link',
+                    'event_label': 'Download Example File Cancelled'
+                });
+            }
+        } else {
+            if (typeof gtag === 'function') {
+                gtag('event', 'download_link_confirm', {
+                    'event_category': 'Link',
+                    'event_label': 'Download Example File Proceed'
+                });
+            }
+        }
+    });
+}
+
             // Navigasi Keyboard untuk dropdown
             document.getElementById('dropdownButton').addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
