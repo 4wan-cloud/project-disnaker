@@ -12,14 +12,24 @@
     </script>
     <!-- Akhir dari Pengelola Tag Google -->
 
+    <!-- Muat terlebih dahulu sumber daya penting -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://kit.fontawesome.com/0594d25cfd.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/chart.js" as="script">
+
     <!-- Tag Meta dan Integrasi -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal web untuk pelatihan kerja dan penempatan kerja oleh Dinas Tenaga Kerja Magetan.">
     <meta name="keywords" content="Disnaker Magetan, pelatihan kerja, penempatan kerja, kartu AK1, layanan tenaga kerja, BKK">
     <title>Disnaker Magetan - Portal Pelatihan & Penempatan Kerja</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Ikon tab browser -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-74RZ3RSTGT"></script>
     <script>
@@ -28,54 +38,23 @@
         gtag('js', new Date());
         gtag('config', 'G-74RZ3RSTGT');
     </script>
-    <!-- FontAwesome CDN -->
-    <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous"></script>
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Ikon Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <!-- Gaya CSS Kustom -->
+
+    <!-- Gaya CSS penting yang langsung ditulis -->
     <style>
-        .tab-content {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .dropdown-menu {
-            display: none;
-            animation: slideDown 0.3s ease-in-out;
-        }
-        .dropdown-menu.active {
-            display: block;
-        }
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .dropdown-button.active .fa-chevron-down {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 300px;
-        }
-        .loading-spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top: 4px solid #3498db;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        /* Animasi untuk konten tab */
+        .tab-content{animation:fadeIn .5s ease-in-out}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        
+        /* Gaya untuk dropdown menu */
+        .dropdown-menu{display:none;animation:slideDown .3s ease-in-out}
+        .dropdown-menu.active{display:block}
+        @keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+        
+        /* Animasi ikon dropdown */
+        .dropdown-button.active .fa-chevron-down{transform:rotate(180deg);transition:transform .3s ease}
+        
+        /* Kontainer untuk chart */
+        .chart-container{position:relative;width:100%;height:300px}
     </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
@@ -211,6 +190,10 @@
             <p class="text-gray-600 text-sm mt-4">Pastikan data yang diunggah sesuai dengan format yang ditentukan (Excel atau CSV). Unduh contoh format untuk panduan pelaporan.</p>
             <p class="text-gray-600 text-sm mt-2">Jika form tidak dapat diakses, hubungi kami melalui <a href="https://wa.me/6289524176626" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">WhatsApp</a>.</p>
         </div>
+
+        <!-- JavaScript yang ditunda pemuatannya -->
+        <script src="https://kit.fontawesome.com/0594d25cfd.js" crossorigin="anonymous" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
         <!-- JavaScript untuk Dropdown dan Tab -->
         <script>
