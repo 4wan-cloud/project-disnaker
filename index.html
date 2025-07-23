@@ -20,6 +20,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal web untuk pelatihan kerja dan penempatan kerja oleh Dinas Tenaga Kerja Magetan.">
     <meta name="keywords" content="Disnaker Magetan, pelatihan kerja, penempatan kerja, kartu AK1, layanan tenaga kerja, BKK">
+    <meta name="author" content="Dinas Tenaga Kerja Kabupaten Magetan">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="id">
+    <meta property="og:title" content="Disnaker Magetan - Portal Pelatihan & Penempatan Kerja">
+    <meta property="og:description" content="Portal web untuk pelatihan kerja dan penempatan kerja oleh Dinas Tenaga Kerja Magetan.">
+    <meta property="og:image" content="/images/pp.png">
+    <meta property="og:url" content="https://disnaker.magetan.go.id">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Disnaker Magetan - Portal Pelatihan & Penempatan Kerja">
+    <meta name="twitter:description" content="Portal web untuk pelatihan kerja dan penempatan kerja oleh Dinas Tenaga Kerja Magetan.">
+    <meta name="twitter:image" content="/images/pp.png">
     <title>Disnaker Magetan - Portal Pelatihan & Penempatan Kerja</title>
 
     <!-- Ikon tab browser -->
@@ -498,27 +510,27 @@
             }
 
             // Pesan konfirmasi untuk tautan unduhan contoh.xlsx
-const downloadLink = document.querySelector('a[href="/src/contoh.xlsx"]');
-if (downloadLink) {
-    downloadLink.addEventListener('click', (e) => {
-        if (!confirm('Anda akan mengunduh file contoh format pelaporan BKK (contoh.xlsx). Lanjutkan?')) {
-            e.preventDefault();
-            if (typeof gtag === 'function') {
-                gtag('event', 'download_link_cancel', {
-                    'event_category': 'Link',
-                    'event_label': 'Download Example File Cancelled'
+            const downloadLink = document.querySelector('a[href="/src/contoh.xlsx"]');
+            if (downloadLink) {
+                downloadLink.addEventListener('click', (e) => {
+                    if (!confirm('Anda akan mengunduh file contoh format pelaporan BKK (contoh.xlsx). Lanjutkan?')) {
+                        e.preventDefault();
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'download_link_cancel', {
+                                'event_category': 'Link',
+                                'event_label': 'Download Example File Cancelled'
+                            });
+                        }
+                    } else {
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'download_link_confirm', {
+                                'event_category': 'Link',
+                                'event_label': 'Download Example File Proceed'
+                            });
+                        }
+                    }
                 });
             }
-        } else {
-            if (typeof gtag === 'function') {
-                gtag('event', 'download_link_confirm', {
-                    'event_category': 'Link',
-                    'event_label': 'Download Example File Proceed'
-                });
-            }
-        }
-    });
-}
 
             // Navigasi Keyboard untuk dropdown
             document.getElementById('dropdownButton').addEventListener('keydown', (e) => {
